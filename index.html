@@ -1,380 +1,530 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
-    <!meta name="google-site-verification" content="beJQdfyjnIn-LyJq58BxukeDBpEC5KfzUYudlVKt9Zc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shriram Computer | Shriram Computer & Online Services</title>
-    <!-- Google Fonts for Modern Look -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Shriram Computer | Digital Service Center</title>
     <style>
-        /* Live Notification Bar Style */
-.notice-bar {
-    background-color: #ffc107;
-    color: #000;
-    padding: 10px 15px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.notice-badge {
-    background-color: #dc3545;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    margin-right: 10px;
-    animation: blink 1.5s infinite;
-}
-@keyframes blink {
-    50% { opacity: 0.5; }
-}
+        :root {
+            --primary-blue: #0d6efd;
+            --secondary-blue: #023e8a;
+            --accent-gold: #ffb703;
+            --bg-light: #f4f7fc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+        }
 
-/* Google Form Section Style */
-.google-form-box {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-.btn-google-form {
-    display: inline-block;
-    background-color: #0d6efd;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-}
-.btn-google-form:hover {
-    background-color: #0b5ed7;
-}
-        /* CSS Reset & Basic Styling */
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        <!-- Live Announcement / Daily Notice Bar -->
-<div class="notice-bar">
-    <div>
-        <span class="notice-badge">LATEST UPDATE</span>
-        <span id="daily-announcement">
-            📢 Aaj ke Sarkari Form: SSC CGL 2026 Form Fill Up Shuru | Instant PAN Card 2 Hour Mein Banwayein!
-        </span>
-    </div>
-</div>
-        /* Header & Navigation */
-        header {
-            background-color: #0d6efd;
-            color: white;
-            padding: 15px 5%;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Top Announcement Bar */
+        .notice-bar {
+            background-color: #d97706;
+            color: #ffffff;
+            padding: 10px 15px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        /* Header Navigation */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 15px 20px;
+            text-align: center;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
         }
 
-        header .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
+        .brand-focus {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--secondary-blue);
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(13, 110, 253, 0.15);
         }
 
-        header .badge {
-            background-color: #ffc107;
-            color: #000;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .brand-sub {
+            font-size: 1rem;
+            color: #475569;
             font-weight: 600;
+            margin-top: 3px;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(13, 110, 253, 0.85), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            color: white;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 15px;
+            flex: 1;
+        }
+
+        /* Hero WhatsApp CTA Section */
+        .hero-section {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            border: 1px solid #7dd3fc;
+            border-radius: 12px;
+            padding: 20px;
             text-align: center;
-            padding: 80px 20px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
             margin-bottom: 25px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
             display: inline-block;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: 0.3s;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
         }
 
         .btn-whatsapp:hover {
-            background-color: #1eb954;
+            background-color: #1eb857;
             transform: translateY(-2px);
         }
 
-        /* Services Section */
-        .container {
-            padding: 60px 5%;
-            max-width: 1200px;
-            margin: auto;
+        /* Dynamic Card Slider Section (PMFBY Style) */
+        .slider-wrapper {
+            max-width: 100%;
+            margin: 10px auto 20px;
+            overflow: hidden;
+            position: relative;
+            padding: 10px 5px;
         }
 
-        .section-title {
+        .card-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .pm-card {
+            min-width: 260px;
+            max-width: 260px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #0d6efd;
-            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top: 5px solid #16a34a;
+            flex-shrink: 0;
+        }
+
+        .pm-card .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .card-green { border-top-color: #16a34a; }
+        .card-green .icon-circle { background-color: #dcfce7; color: #16a34a; }
+
+        .card-orange { border-top-color: #ea580c; }
+        .card-orange .icon-circle { background-color: #ffedd5; color: #ea580c; }
+
+        .card-blue { border-top-color: #0284c7; }
+        .card-blue .icon-circle { background-color: #e0f2fe; color: #0284c7; }
+
+        .card-purple { border-top-color: #9333ea; }
+        .card-purple .icon-circle { background-color: #f3e8ff; color: #9333ea; }
+
+        .card-red { border-top-color: #dc2626; }
+        .card-red .icon-circle { background-color: #fee2e2; color: #dc2626; }
+
+        .pm-card h4 { font-size: 1.1rem; color: #1e293b; margin-bottom: 8px; font-weight: 700; }
+        .pm-card p { font-size: 0.88rem; color: #64748b; margin-bottom: 15px; }
+
+        .btn-card {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background-color: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .btn-card:hover { opacity: 0.85; }
+
+        .slider-controls { text-align: center; margin-top: 10px; }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #cbd5e1;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active { background-color: #0d6efd; width: 24px; border-radius: 10px; }
+
+        /* Services Grid Layout */
+        .services-title {
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--secondary-blue);
+            margin: 30px 0 20px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
         }
 
         .service-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid #0d6efd;
-            transition: 0.3s;
+            background: var(--card-bg);
+            border-radius: 10px;
+            border-top: 5px solid var(--primary-blue);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 18px 20px;
+            transition: transform 0.2s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
 
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: #222;
+        .card-header {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--secondary-blue);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
         }
 
-        .service-card ul {
-            list-style: none;
+        .service-list { list-style: none; }
+        .service-list li {
+            font-size: 0.92rem;
+            padding: 5px 0;
+            color: #334155;
+            display: flex;
+            align-items: center;
         }
-
-        .service-card ul li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .service-card ul li::before {
+        .service-list li::before {
             content: "✓";
-            color: #25d366;
-            position: absolute;
-            left: 0;
+            color: #16a34a;
             font-weight: bold;
+            margin-right: 8px;
         }
 
-        /* Form & Contact Section */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .form-box, .contact-box {
-            background: white;
-            padding: 30px;
+        /* Google Form Inquiry Block */
+        .inquiry-box {
+            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 0.95rem;
-        }
-
-        .btn-submit {
-            background-color: #0d6efd;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .btn-submit:hover {
-            background-color: #0b5ed7;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #212529;
-            color: white;
+            padding: 30px;
             text-align: center;
-            padding: 20px;
-            margin-top: 60px;
+            margin: 40px 0 20px;
+            border: 2px dashed #0d6efd;
+        }
+
+        .btn-google-form {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            padding: 12px 30px;
+            font-size: 1.05rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-google-form:hover { background-color: var(--secondary-blue); }
+
+        /* Footer Section */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: auto;
             font-size: 0.9rem;
         }
 
-        /* Mobile Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-            header { flex-direction: column; gap: 10px; text-align: center; }
+        footer strong { color: #ffffff; }
+
+        @media (max-width: 600px) {
+            .brand-focus { font-size: 1.7rem; }
         }
-        /* Live Job Notification Section */
-.job-updates-box {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin: 20px 0;
-}
-.job-card {
-    border-left: 4px solid #0d6efd;
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    transition: transform 0.2s ease;
-}
-.job-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.job-title {
-    font-weight: bold;
-    color: #0d6efd;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-.job-meta {
-    font-size: 0.85rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-.badge-new {
-    background-color: #dc3545;
-    color: white;
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-left: 8px;
-}
-.btn-apply {
-    display: inline-block;
-    background-color: #198754;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-.btn-apply:hover {
-    background-color: #157347;
-}
     </style>
 </head>
 <body>
 
+    <!-- Top Notice Bar -->
+    <div class="notice-bar">
+        📢 Shriram Computer: १०+ वर्षाचा विश्वास (Fastest Online Services) 
+    </div>
+
     <!-- Header Section -->
     <header>
-        <div class="logo">Shriram Computer </div>
-        <div class="badge">10+ Saal Ka Bharosa</div>
+        <div class="brand-focus">SHRIRAM COMPUTER</div>
+        <div class="brand-sub">Digital Service Center</div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Aapka Apna Digital & Online Service Center</h1>
-        <p>Sarkari Form, Aadhaar Cash Withdrawal, Money Transfer, PAN Card, aur Sabhi Cyber Cafe Services Ek Hi Chhat Ke Neeche.</p>
-        <!-- APNA WHATSAPP NUMBER YAHAN REPLACE KAREIN -->
-        <a href="https://wa.me/919960828127?text=Hello,%20mujhe%20online%20service%20ke%20bare%20mein%20puchna%20hai." class="btn-whatsapp" target="_blank">
-            💬 WhatsApp Par Inquiry Karein
-        </a>
-    </section>
-
-    <!-- Services Section -->
     <div class="container">
-        <h2 class="section-title">Hamari Services</h2>
+
+        <!-- WhatsApp CTA Section -->
+        <div class="hero-section">
+            <h2 style="color: #0f172a; margin-bottom: 12px; font-size: 1.3rem;">ऑनलाइन सेवा व फॉर्म भरण्यासाठी संपर्क करा</h2>
+            <a href="https://wa.me/918275024907?text=Hello%20Shriram%20Computer,%20मला%20सेवांबद्दल%20माहिती%20हवी%20आहे." target="_blank" class="btn-whatsapp">
+                💬 WhatsApp वर संपर्क करा
+            </a>
+        </div>
+
+        <!-- Dynamic Card Slider Section (Single Card Single Move) -->
+        <h3 style="text-align: center; color: #0f172a; margin-bottom: 10px;">⚡ Key Digital Services Slider</h3>
+        
+        <div class="slider-wrapper">
+            <div class="card-track" id="cardTrack">
+                
+                <div class="pm-card card-green">
+                    <div>
+                        <div class="icon-circle">🌾</div>
+                        <h4>शेतकरी योजना व अर्ज</h4>
+                        <p>पीक विमा, कृषी योजना व विविध शासकीय अर्ज भरा.</p>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSespr0vqWh_UJsrbBITbCwg4FrTkTZ2ixneJgX3Ct0wtVyF5A/viewform" target="_blank" class="btn-card">Apply Now ➔</a>
+                </div>
+
+                <div class="pm-card card-orange">
+                    <div>
+                        <div class="icon-circle">🆔</div>
+                        <h4> Maha-ID </h4>
+                        <p>नवीन Maha-ID कार्ड मिळवा.</p>
+                    </div>
+                    <a href="https://mahasarathi.maharashtra.gov.in/home/landing" target="_blank" class="btn-card">Apply Now ➔</a>
+                </div>
+
+                <div class="pm-card card-blue">
+                    <div>
+                        <div class="icon-circle">📑</div>
+                        <h4>महिला शेतकरी प्रमाणपत्र</h4>
+                        <p>तुमच्या अर्जासाठी येथे क्लिक करा.</p>
+                    </div>
+                    <a href="https://uat-mahakrishi.mahaitgov.in/mahila-shetkari-service/apply/" target="_blank" class="btn-card">Check Now ➔</a>
+                </div>
+
+                <div class="pm-card card-purple">
+                    <div>
+                        <div class="icon-circle">💼</div>
+                        <h4>सरकारी नोकरी अर्ज</h4>
+                        <p>SSC, Railway, Police & Banking नोकरी अर्ज.</p>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSespr0vqWh_UJsrbBITbCwg4FrTkTZ2ixneJgX3Ct0wtVyF5A/viewform" target="_blank" class="btn-card">Explore Now ➔</a>
+                </div>
+
+                <div class="pm-card card-red">
+                    <div>
+                        <div class="icon-circle">🎓</div>
+                        <h4> All CET,JEE,NEET FORMS</h4>
+                        <p>All CET and Admission Counselling Applications </p>
+                    </div>
+                    <a href="https://cetcell.mahacet.org/" target="_blank" class="btn-card">Apply Now ➔</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slider-controls" id="dotsContainer">
+            <!-- Dots generated dynamically via JavaScript -->
+        </div>
+
+        <!-- 9 Main Services Grid -->
+        <h2 class="services-title">आमच्या सर्व डिजिटल सेवा (Our Services)</h2>
+
         <div class="services-grid">
             
-            <div class="service-card">
-                <h3>📋 Sarkari Form & Exams</h3>
-                <ul>
-                    <li>SSC, Railway, Police Recruitment</li>
-                    <li>School/College Admission Forms</li>
-                    <li>Scholarship Forms</li>
-                    <li>Admit Card & Result Download</li>
+            <div class="service-card" style="border-top-color: #0d6efd;">
+                <div class="card-header">🏛️ शासकीय प्रमाणपत्रे</div>
+                <ul class="service-list">
+                    <li>उत्पन्न दाखला (Income Certificate)</li>
+                    <li>जात प्रमाणपत्र (Caste Certificate)</li>
+                    <li>नॉन-क्रिमीलेअर प्रमाणपत्र</li>
+                    <li>अधिवास / Domicile Certificate</li>
+                    <li>रहिवाशी दाखला</li>
+                    <li>राष्ट्रीयत्व प्रमाणपत्र</li>
+                    <li>शैक्षणिक प्रमाणपत्रे & Affidavit</li>
                 </ul>
             </div>
 
-            <div class="service-card">
-                <h3>🏦 Banking & AEPS Services</h3>
-                <ul>
-                    <li>Aadhaar Cash Withdrawal</li>
-                    <li>Instant Money Transfer (DMT)</li>
-                    <li>Bank Account Balance Check</li>
-                    <li>Mini Statement Printing</li>
+            <div class="service-card" style="border-top-color: #0284c7;">
+                <div class="card-header">🎓 विद्यार्थी व शिक्षण सेवा</div>
+                <ul class="service-list">
+                    <li>MahaDBT Scholarship अर्ज & Renewal</li>
+                    <li>College Admission Form</li>
+                    <li>Exam Form & परीक्षा शुल्क भरणा</li>
+                    <li>विविध प्रवेश परीक्षा अर्ज (CET, NEET, etc.)</li>
+                    <li>निकाल / Hall Ticket Download</li>
                 </ul>
             </div>
 
-            <div class="service-card">
-                <h3>💳 Documents & Cards</h3>
-                <ul>
-                    <li>Naya PAN Card & Correction</li>
-                    <li>Passport Application</li>
-                    <li>Ayushman Bharat Card</li>
-                    <li>Voter ID & Ration Card Services</li>
+            <div class="service-card" style="border-top-color: #16a34a;">
+                <div class="card-header">💼 नोकरी व रोजगार</div>
+                <ul class="service-list">
+                    <li>Mahaswayam Registration</li>
+                    <li>सर्व सरकारी व खाजगी नोकरी अर्ज</li>
+                    <li>रोजगार नोंदणी (Employment Exchange)</li>
+                    <li>Resume / Biodata तयार करणे</li>
+                    <li>Admit Card / Result Download</li>
                 </ul>
             </div>
 
-            <div class="service-card">
-                <h3>🖨️ Printing & Scanning</h3>
-                <ul>
-                    <li>High-Speed Color & B/W Print</li>
+            <div class="service-card" style="border-top-color: #ea580c;">
+                <div class="card-header">🆔 आधार व डिजिटल सेवा</div>
+                <ul class="service-list">
+                    <li>Aadhaar संबंधित ऑनलाइन सेवा</li>
+                    <li>PAN Card अर्ज & Correction</li>
+                    <li>Voter ID (मतदार ओळखपत्र) अर्ज/दुरुस्ती</li>
+                    <li>DigiLocker मदत & Documents Scan</li>
+                    <li>Online Document Download</li>
+                </ul>
+            </div>
+
+            <div class="service-card" style="border-top-color: #2563eb;">
+                <div class="card-header">🚗 वाहन सेवा</div>
+                <ul class="service-list">
+                    <li>Driving Licence ऑनलाइन अर्ज</li>
+                    <li>Learning Licence</li>
+                    <li>Licence Renewal</li>
+                    <li>RC संबंधित ऑनलाइन सेवा</li>
+                    <li>Vehicle Tax Payment</li>
+                </ul>
+            </div>
+
+            <div class="service-card" style="border-top-color: #9333ea;">
+                <div class="card-header">🌾 शेतकरी सेवा</div>
+                <ul class="service-list">
+                    <li>कृषी योजना ऑनलाइन अर्ज</li>
+                    <li>शेतकरी योजना Online Form</li>
+                    <li>पीक / कृषी संबंधित अर्ज</li>
+                    <li>अनुदान योजनांचे अर्ज</li>
+                    <li>विविध सरकारी योजना अर्ज</li>
+                </ul>
+            </div>
+
+            <div class="service-card" style="border-top-color: #db2777;">
+                <div class="card-header">📑 इतर ऑनलाइन सेवा</div>
+                <ul class="service-list">
+                    <li>जन्म & मृत्यू प्रमाणपत्र</li>
+                    <li>विवाह नोंदणी दाखला</li>
+                    <li>Online Payment & Bill Services</li>
+                    <li>Application Status Check</li>
+                    <li>विविध शासकीय पोर्टल नोंदणी</li>
+                </ul>
+            </div>
+
+            <div class="service-card" style="border-top-color: #475569;">
+                <div class="card-header">🖨️ दुकानातील अतिरिक्त सेवा</div>
+                <ul class="service-list">
+                    <li>Xerox / Color Printout</li>
+                    <li>High-Quality Scanning</li>
+                    <li>Lamination & Photo Print</li>
+                    <li>Typing (Marathi / English)</li>
+                    <li>PDF Merge / Split / Create</li>
+                </ul>
+            </div>
+
+            <div class="service-card" style="border-top-color: #d97706;">
+                <div class="card-header">📚 पुस्तके व स्टेशनरी</div>
+                <ul class="service-list">
+                    <li>शालेय & कॉलेज पुस्तके</li>
+                    <li>स्पर्धा परीक्षा पुस्तके</li>
+                    <li>नोटबुक, वह्या, फायल्स</li>
+                    <li>पेन, पेन्सिल & आर्ट साहित्य</li>
+                    <li>कॉम्प्युटर संबंधित साहित्य</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Google Form Inquiry Section -->
+        <div class="inquiry-box">
+            <h3 style="color: #0d6efd; margin-bottom: 10px;">ऑनलाइन चौकशी अर्ज (Online Inquiry)</h3>
+            <p style="margin-bottom: 20px; color: #475569;">कोणत्याही कामाच्या चौकशीसाठी खालील बटणावर क्लिक करून Google Form भरा:</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSespr0vqWh_UJsrbBITbCwg4FrTkTZ2ixneJgX3Ct0wtVyF5A/viewform?usp=publish-editor" target="_blank" class="btn-google-form">
+                📋 Click Here For Google Form Inquiry
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer Section -->
+    <footer>
+        <p><strong>SHRIRAM COMPUTER</strong> - Digital Service Center</p>
+        <p style="margin-top: 5px;">Address : Near Mahila college, Beside Central Bank Of India,Bus Stand Road,Chandur Rly Dist.Amravati & Contact No. : 8275024907 | All Digital Services Available</p>
+        <p style="margin-top: 8px; font-size: 0.8rem; color: #64748b;">© 2026 Shriram Computer. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Script for Single Card Slide Animation -->
+    <script>
+        const track = document.getElementById('cardTrack');
+        const cards = document.querySelectorAll('.pm-card');
+        const dotsContainer = document.getElementById('dotsContainer');
+        let currentCardIndex = 0;
+        const totalCards = cards.length;
+
+        // Generate dots according to total cards
+        for (let i = 0; i < totalCards; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => moveToCard(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        function moveToCard(index) {
+            currentCardIndex = index;
+            const cardWidth = 280; // card width (260px) + gap (20px)
+            track.style.transform = `translateX(-${currentCardIndex * cardWidth}px)`;
+            
+            dots.forEach(dot => dot.classList.remove('active'));
+            if(dots[currentCardIndex]) dots[currentCardIndex].classList.add('active');
+        }
+
+        // Auto rotation single card at a time every 2.5 seconds
+        setInterval(() => {
+            currentCardIndex = (currentCardIndex + 1) % totalCards;
+            moveToCard(currentCardIndex);
+        }, 2500);
+    </script>
+</body>
+</html>
                     <li>Document Scanning & PDF Creation</li>
                     <li>Lamination & Spiral Binding</li>
                     <li>PVC Plastic Card Printing</li>
