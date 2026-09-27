@@ -517,7 +517,7 @@
             if(dots[currentCardIndex]) dots[currentCardIndex].classList.add('active');
         }
 
-        // Auto rotation single card at a time every 3 seconds
+        // Auto rotation single card at a time every 2.5 seconds
         setInterval(() => {
             currentCardIndex = (currentCardIndex + 1) % totalCards;
             moveToCard(currentCardIndex);
@@ -525,4 +525,3 @@
     </script>
 </body>
 </html>
-                   
